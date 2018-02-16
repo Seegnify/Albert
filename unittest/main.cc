@@ -5,6 +5,7 @@
 #include "utils.hh"
 
 #include <fstream>
+#include <unistd.h>
 
 #include <rapidjson/document.h>
 #include <rapidjson/error/en.h>
