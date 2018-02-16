@@ -6,7 +6,7 @@
 # refer to the root source directory and root bnary directory of the project as
 # respectively ${KAPISH_SOURCE_DIR} and ${KAPISH_BINARY_DIR}.
 cmake_minimum_required (VERSION 2.8.11)
-project (KAPISH)
+project (DL)
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -DRELEASE")
