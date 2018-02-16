@@ -5,7 +5,7 @@
 #include <queue>
 #include <unordered_map>
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Context {
   public:
     Context() {
