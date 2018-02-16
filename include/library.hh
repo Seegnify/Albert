@@ -285,7 +285,7 @@ class Dictionary {
     std::unordered_map<int, Definition*> _index;
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Runtime : public Function<T,M> {
   public:
 
@@ -344,10 +344,10 @@ class Runtime : public Function<T,M> {
 };
 
 // runtime frame: index -> runtime
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 using RuntimeFrame = std::vector<Runtime<T,M>*>;
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class ZeroFeed : public Function<T,M> {
   public:
     ZeroFeed(Function<T,M>* delegate) {
@@ -371,7 +371,7 @@ class ZeroFeed : public Function<T,M> {
     Function<T,M>* _delegate;
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Timeline {
   public:
     ~Timeline() {
