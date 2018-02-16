@@ -1,5 +1,5 @@
 #
-# Kapish master project
+# Albert master project
 #
 
 # CMakeLists files in this project can
