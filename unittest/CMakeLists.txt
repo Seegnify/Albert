@@ -10,11 +10,11 @@ get_filename_component(outerPath "${CMAKE_CURRENT_LIST_DIR}/.." ABSOLUTE)
 set(DEPENDENCY_DIR "${outerPath}/depends" CACHE STRING "Path to Dependencies")
 
 # Create unittest executable
-add_executable (al-unittest main.cc utils.cc)
+add_executable (unittest main.cc utils.cc)
 
 # Include dirs
-include_directories(${AL_SOURCE_DIR}/include)
-include_directories(${AL_SOURCE_DIR}/unittest)
+include_directories(${MASTER_SOURCE_DIR}/include)
+include_directories(${MASTER_SOURCE_DIR}/unittest)
 include_directories(${DEPENDENCY_DIR}/rapidjson/include)
 
 # Enable C++11
@@ -25,4 +25,4 @@ set(CMAKE_SKIP_RPATH TRUE)
 
 # Link executable
 list(APPEND AL_LIBS dl)
-target_link_libraries(al-unittest ${AL_LIBS})
+target_link_libraries(unittest ${AL_LIBS})
