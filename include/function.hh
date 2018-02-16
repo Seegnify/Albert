@@ -3,7 +3,7 @@
 
 #include "matrix.hh"
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Function {
   public:
     Function() {
@@ -22,7 +22,7 @@ class Function {
     Matrix<T,M>* _value;
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Variable : public Function<T,M>  {
   public:
     Variable(Matrix<T,M>* value = NULL) {
@@ -72,7 +72,7 @@ class Variable : public Function<T,M>  {
     Matrix<T,M>* _derivative;
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Constant : public Variable<T,M>  {
   public:
     Constant(Matrix<T,M>* value = NULL) : Variable<T,M> (value) {}
@@ -85,7 +85,7 @@ class Constant : public Variable<T,M>  {
     }
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class UnaryOperator : public Function<T,M>  {
   public:
     UnaryOperator(Function<T,M>* f) { _function = f; }
@@ -115,7 +115,7 @@ class UnaryOperator : public Function<T,M>  {
     Function<T,M>* _function;
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class BinaryOperator : public Function<T,M>  {
   public:
     BinaryOperator(Function<T,M>* l, Function<T,M>* r) {
@@ -150,7 +150,7 @@ class BinaryOperator : public Function<T,M>  {
     Function<T,M>* _rfunction;
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Exponent : public UnaryOperator<T,M> {
   public:
     Exponent(Function<T,M>* f) : UnaryOperator<T,M>(f) {}
@@ -166,7 +166,7 @@ class Exponent : public UnaryOperator<T,M> {
     }
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Transpose : public UnaryOperator<T,M> {
   public:
     Transpose(Function<T,M>* f) : UnaryOperator<T,M>(f) {}
@@ -182,7 +182,7 @@ class Transpose : public UnaryOperator<T,M> {
     }
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Summation : public UnaryOperator<T,M>  {
   public:
     Summation(Function<T,M>* f) : UnaryOperator<T,M>(f) {}
@@ -205,7 +205,7 @@ class Summation : public UnaryOperator<T,M>  {
 };
 
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Addition : public BinaryOperator<T,M>  {
   public:
     Addition(Function<T,M>* l, Function<T,M>* r) :
@@ -225,7 +225,7 @@ class Addition : public BinaryOperator<T,M>  {
     }
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Subtraction : public BinaryOperator<T,M>  {
   public:
     Subtraction(Function<T,M>* l, Function<T,M>* r) :
@@ -244,7 +244,7 @@ class Subtraction : public BinaryOperator<T,M>  {
     }
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Product : public BinaryOperator<T,M>  {
   public:
     Product(Function<T,M>* l, Function<T,M>* r) :
@@ -263,7 +263,7 @@ class Product : public BinaryOperator<T,M>  {
     }
 };
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Element : public BinaryOperator<T,M>  {
   public:
     Element(Function<T,M>* l, Function<T,M>* r) :
