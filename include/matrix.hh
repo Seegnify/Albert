@@ -3,7 +3,7 @@
 
 #include "context.hh"
 
-template <typename B, template <typename B> class M>
+template <typename B, template <typename> class M>
 class Matrix {
   public:
 
