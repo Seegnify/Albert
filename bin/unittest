@@ -1,0 +1,19 @@
+#!/bin/sh
+
+ROOT_DIR=$(dirname $0)/..
+TEST_DIR=$(readlink -f "$ROOT_DIR/samples")
+TEST_CMD=$(readlink -f "$ROOT_DIR/build/unittest/kp-unittest")
+
+if [ ! -e "$TEST_CMD" ]; then
+  echo "$TEST_CMD not found."
+  exit 1
+fi
+
+cd "$TEST_DIR"
+
+if [ ! -z "$VALGRIND" ]; then
+  valgrind --leak-check=full "$TEST_CMD"
+else
+  "$TEST_CMD"
+fi
+

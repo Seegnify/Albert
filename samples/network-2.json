@@ -1,0 +1,10 @@
+{
+  "network" : {
+    "name" : "bar",
+    "variables" : ["x", "y"],
+    "constants" : ["g"],
+    "body" : {
+      "return" : ["+", "x", "y", "g"]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "network" : {
+    "name" : "foo",
+    "variables" : ["x", "y", "z"],
+    "constants" : ["a", "b"],
+    "imports" : {
+      "bar" : { "user" : "joe19", "library" : "default" }
+    },
+    "body" : {
+      "e1" : ["*", "a", "x"],
+      "e2" : ["**", "b", "y"],
+      "e3" : ["bar", "z"],
+      "e4" : ["*", { "e2" : -1 }, "e3"],
+      "return" : ["+", "e1", "e2", "e3", "e4"]
+    }
+  }
+}
