@@ -9,6 +9,7 @@ A Compact Graph-based C++ Deep Learning Library
 
 # Contents
 - bin - project scripts
+- depends - git dependecies
 - include - library headers
 - samples - sample files
 - unittest - unit tests
