@@ -1,4 +1,3 @@
 [submodule "rapidjson"]
-    path = rapidjson
-    url = https://github.com/bowfin/rapidjson.git
-    ignore = dirty
+	path = rapidjson
+	url = https://github.com/bowfin/rapidjson.git
