@@ -10,7 +10,7 @@ get_filename_component(outerPath "${CMAKE_CURRENT_LIST_DIR}/.." ABSOLUTE)
 set(DEPENDENCY_DIR "${outerPath}/depends" CACHE STRING "Path to Dependencies")
 
 # Create unittest executable
-add_executable (kp-unittest main.cc utils.cc)
+add_executable (al-unittest main.cc utils.cc)
 
 # Include dirs
 include_directories(${AL_SOURCE_DIR}/include)
