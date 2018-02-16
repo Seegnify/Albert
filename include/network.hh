@@ -5,7 +5,7 @@
 
 #include "compiler.hh"
 
-template<typename T, template <typename T> class M>
+template<typename T, template <typename> class M>
 class Network : public Function<T,M> {
   public:
     Network() {
