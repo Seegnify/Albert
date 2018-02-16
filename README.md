@@ -1,4 +1,4 @@
-# Kapish
+# Albert
 A Compact Graph-based C++ Deep Learning Library
 
 # Features
