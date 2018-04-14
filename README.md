@@ -26,4 +26,4 @@ Dependency on eigen3 and ViennaCL is satisfied via system include headers.
 - bin/build - builds the unit tests
 - bin/unittest - runs the unit tests
 
-NOTE: It is a work in progress. Not for production.
+NOTE: It is a work in progress.
