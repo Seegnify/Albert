@@ -1,5 +1,5 @@
-# Albert
-A Compact Graph-based C++ Deep Learning Library
+# FormulaT
+Compact Graph-based C++ Deep Learning Library
 
 # Features
 - DAG with variables, constants and operators
