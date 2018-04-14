@@ -1,5 +1,5 @@
 # FormulaT
-Compact Graph-based C++ Deep Learning Library
+Compact graph-based C++ Deep Learning Library
 
 # Features
 - DAG with variables, constants and operators
